@@ -11,7 +11,7 @@ const TopTeams = () => {
 
     useEffect(() => {
         async function fetchMyAPI() {
-            let response = await fetch('https://hltv-api.vercel.app/api/teams.json')
+            let response = await fetch('https://hltv-api.vercel.app/api/player.json')
             response = await response.json()
             setData(response)
         }
@@ -19,7 +19,7 @@ const TopTeams = () => {
     }, [])
 
 
-    //console.log(data);
+    console.log(data);
 
 
 
@@ -68,7 +68,7 @@ const TopThreeTeams = () => {
 
     useEffect(() => {
         async function fetchMyAPI() {
-            let response = await fetch('https://hltv-api.vercel.app/api/teams.json')
+            let response = await fetch('https://hltv-api.vercel.app/api/player.json')
             response = await response.json()
             setData(response.slice(0, 3))
         }

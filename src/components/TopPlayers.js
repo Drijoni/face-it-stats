@@ -12,7 +12,7 @@ const TopPlayers = () => {
 
     useEffect(() => {
         async function fetchMyAPI() {
-            let response = await fetch('https://hltv-api.vercel.app/api/players.json')
+            let response = await fetch('https://hltv-api.vercel.app/api/team.json')
             response = await response.json()
             setData(response)
         }
@@ -20,7 +20,7 @@ const TopPlayers = () => {
     }, [])
 
 
-    //console.log(data);
+    console.log(data);
     return (
         <View>
             <FlatList
@@ -49,15 +49,12 @@ const TopThreePlayers = () => {
 
     useEffect(() => {
         async function fetchMyAPI() {
-            let response = await fetch('https://hltv-api.vercel.app/api/players.json')
+            let response = await fetch('https://hltv-api.vercel.app/api/team.json')
             response = await response.json()
             setData(response.slice(0, 3))
         }
         fetchMyAPI()
     }, [])
-
-
-    //console.log(data);
 
     return (
 
